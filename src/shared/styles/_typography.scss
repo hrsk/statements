@@ -1,0 +1,251 @@
+@use 'sass:map';
+@use 'font-sizes' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+// Family
+$font-family-primary: 'Inter', sans-serif;
+$font-family-secondary: $font-family-primary; // font-family-02 в макете не найден, уточнить
+
+// Weight
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line height
+$line-height-heading: 1.2; // Display и Heading
+$line-height-text: 1.4; // Text / *
+
+// Display
+$display-80: (
+  font-family: $font-family-primary,
+  font-size: $font-size-display-80,
+  font-weight: $font-weight-semibold,
+  line-height: $line-height-heading,
+);
+
+$display-72: (
+  font-family: $font-family-primary,
+  font-size: $font-size-display-72,
+  font-weight: $font-weight-semibold,
+  line-height: $line-height-heading,
+);
+
+// Heading
+$heading-64: (
+  font-family: $font-family-primary,
+  font-size: $font-size-heading-64,
+  font-weight: $font-weight-semibold,
+  line-height: $line-height-heading,
+);
+
+$heading-56: (
+  font-family: $font-family-primary,
+  font-size: $font-size-heading-56,
+  font-weight: $font-weight-semibold,
+  line-height: $line-height-heading,
+);
+
+$heading-48: (
+  font-family: $font-family-primary,
+  font-size: $font-size-heading-48,
+  font-weight: $font-weight-semibold,
+  line-height: $line-height-heading,
+);
+
+$heading-40: (
+  font-family: $font-family-primary,
+  font-size: $font-size-heading-40,
+  font-weight: $font-weight-semibold,
+  line-height: $line-height-heading,
+);
+
+$heading-32: (
+  font-family: $font-family-primary,
+  font-size: $font-size-heading-32,
+  font-weight: $font-weight-semibold,
+  line-height: $line-height-heading,
+);
+
+$heading-24: (
+  font-family: $font-family-primary,
+  font-size: $font-size-heading-24,
+  font-weight: $font-weight-semibold,
+  line-height: $line-height-heading,
+);
+
+// Text
+$text-18-bold: (
+  font-family: $font-family-primary,
+  font-size: $font-size-text-18,
+  font-weight: $font-weight-bold,
+  line-height: $line-height-text,
+);
+
+$text-18-semi: (
+  font-family: $font-family-primary,
+  font-size: $font-size-text-18,
+  font-weight: $font-weight-semibold,
+  line-height: $line-height-text,
+);
+
+$text-18-regular: (
+  font-family: $font-family-primary,
+  font-size: $font-size-text-18,
+  font-weight: $font-weight-regular,
+  line-height: $line-height-text,
+);
+
+$text-16-bold: (
+  font-family: $font-family-primary,
+  font-size: $font-size-text-16,
+  font-weight: $font-weight-bold,
+  line-height: $line-height-text,
+);
+
+$text-16-semi: (
+  font-family: $font-family-primary,
+  font-size: $font-size-text-16,
+  font-weight: $font-weight-semibold,
+  line-height: $line-height-text,
+);
+
+$text-16-regular: (
+  font-family: $font-family-primary,
+  font-size: $font-size-text-16,
+  font-weight: $font-weight-regular,
+  line-height: $line-height-text,
+);
+
+$text-14-bold: (
+  font-family: $font-family-primary,
+  font-size: $font-size-text-14,
+  font-weight: $font-weight-bold,
+  line-height: $line-height-text,
+);
+
+$text-14-semi: (
+  font-family: $font-family-primary,
+  font-size: $font-size-text-14,
+  font-weight: $font-weight-semibold,
+  line-height: $line-height-text,
+);
+
+$text-14-regular: (
+  font-family: $font-family-primary,
+  font-size: $font-size-text-14,
+  font-weight: $font-weight-regular,
+  line-height: $line-height-text,
+);
+
+$text-12-bold: (
+  font-family: $font-family-primary,
+  font-size: $font-size-text-12,
+  font-weight: $font-weight-bold,
+  line-height: $line-height-text,
+);
+
+$text-12-semi: (
+  font-family: $font-family-primary,
+  font-size: $font-size-text-12,
+  font-weight: $font-weight-semibold,
+  line-height: $line-height-text,
+);
+
+$text-12-regular: (
+  font-family: $font-family-primary,
+  font-size: $font-size-text-12,
+  font-weight: $font-weight-regular,
+  line-height: $line-height-text,
+);
+
+// Mixin
+@mixin typography($style) {
+  font-family: map.get($style, font-family);
+  font-size: map.get($style, font-size);
+  font-weight: map.get($style, font-weight);
+  line-height: map.get($style, line-height);
+  letter-spacing: 0;
+}
+
+// Utility classes
+.display-80 {
+  @include typography($display-80);
+}
+
+.display-72 {
+  @include typography($display-72);
+}
+
+.heading-64 {
+  @include typography($heading-64);
+}
+
+.heading-56 {
+  @include typography($heading-56);
+}
+
+.heading-48 {
+  @include typography($heading-48);
+}
+
+.heading-40 {
+  @include typography($heading-40);
+}
+
+.heading-32 {
+  @include typography($heading-32);
+}
+
+.heading-24 {
+  @include typography($heading-24);
+}
+
+.text-18-bold {
+  @include typography($text-18-bold);
+}
+
+.text-18-semi {
+  @include typography($text-18-semi);
+}
+
+.text-18-regular {
+  @include typography($text-18-regular);
+}
+
+.text-16-bold {
+  @include typography($text-16-bold);
+}
+
+.text-16-semi {
+  @include typography($text-16-semi);
+}
+
+.text-16-regular {
+  @include typography($text-16-regular);
+}
+
+.text-14-bold {
+  @include typography($text-14-bold);
+}
+
+.text-14-semi {
+  @include typography($text-14-semi);
+}
+
+.text-14-regular {
+  @include typography($text-14-regular);
+}
+
+.text-12-bold {
+  @include typography($text-12-bold);
+}
+
+.text-12-semi {
+  @include typography($text-12-semi);
+}
+
+.text-12-regular {
+  @include typography($text-12-regular);
+}
