@@ -5,13 +5,14 @@
 
 // Family
 $font-family-primary: 'Inter', sans-serif;
-$font-family-secondary: $font-family-primary; // font-family-02 в макете не найден, уточнить
+// $font-family-secondary: $font-family-primary; // font-family-02 в макете не найден, уточнить
 
 // Weight
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
+$font-weight-extrabold: 800;
 
 // Line height
 $line-height-heading: 1.2; // Display и Heading
@@ -71,7 +72,7 @@ $heading-32: (
 $heading-24: (
   font-family: $font-family-primary,
   font-size: $font-size-heading-24,
-  font-weight: $font-weight-semibold,
+  font-weight: $font-weight-extrabold,
   line-height: $line-height-heading,
 );
 

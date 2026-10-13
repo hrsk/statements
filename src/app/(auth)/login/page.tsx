@@ -1,3 +1,5 @@
-export default function SignIn() {
-  return <div>Login</div>;
+import { SignIn } from "@/views";
+
+export default function Page() {
+  return <SignIn />;
 }
