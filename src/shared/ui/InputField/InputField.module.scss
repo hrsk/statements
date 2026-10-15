@@ -1,11 +1,18 @@
 @use '../../styles/typography' as *;
+@use '../../styles/colors';
+
 .field {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 
   .controlWrapper {
     position: relative;
+  }
+  .error {
+    min-height: 24px;
+      @include typography($text-16-regular);
+      color: #DC2626;
   }
 
 .input {
@@ -13,6 +20,9 @@
   padding: 16px;
   background-color: #fff;
   border-radius: 6px;
+  min-width: 230px;
+  width: 100%;
+  box-sizing: border-box;
 
 
   &::placeholder {
