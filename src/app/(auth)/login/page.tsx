@@ -1,5 +1,1 @@
-import { SignIn } from "@/views";
-
-export default function Page() {
-  return <SignIn />;
-}
+export { LoginForm as default } from "@/features/auth/login";

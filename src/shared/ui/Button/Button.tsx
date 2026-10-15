@@ -52,7 +52,6 @@ export const Button = (properties: BaseButtonProperties) => {
             {...linkProperties}
           />
         }
-        // className={clsx(styles.button, styles[variant])}
       >
         {children}
       </BaseButton>
@@ -70,21 +69,4 @@ export const Button = (properties: BaseButtonProperties) => {
       {children}
     </BaseButton>
   );
-  // return (
-  //   <BaseButton
-  //     {...rest}
-  //     className={clsx(styles.button, styles[variant])}
-  //     onClick={onClick}
-  //   >
-  //     {children}
-  //   </BaseButton>
-  // );
-  // return (
-  //   <BaseButton
-  //     className={clsx(styles.button, styles[variant])}
-  //     onClick={onClick}
-  //   >
-  //     {title}
-  //   </BaseButton>
-  // );
 };

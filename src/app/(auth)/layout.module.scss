@@ -1,0 +1,27 @@
+@use '../../shared/styles/colors';
+
+.layoutContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-height: 1024px;
+  height: 100vh;
+    .rightSide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+}
+
+.illustration {
+  background: colors.$brand-secondary-400 url('./../../assets/images/cuate.png') no-repeat center;
+  height: 100%;
+  min-height: 620px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .logo {
+    padding-top: 100px;
+  }
+}
