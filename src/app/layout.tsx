@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./../shared/styles/globals.scss";
 
 export const metadata: Metadata = {
   title: "Statements",
@@ -8,7 +9,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
