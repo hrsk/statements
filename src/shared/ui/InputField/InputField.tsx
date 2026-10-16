@@ -1,41 +1,37 @@
 import { Field } from "@base-ui/react/field";
+import {
+  ControllerFieldState,
+  ControllerRenderProps,
+  FieldValues,
+} from "react-hook-form";
 import styles from "./InputField.module.scss";
-import { ReactElement, ReactNode } from "react";
 
-type Properties = {
-  errorMessage?: string;
+type Properties<T extends FieldValues> = {
   label: string;
   placeholder: string;
-  description?: string;
-  iconLeft?: ReactElement;
-  iconRight?: ReactNode;
+  field: ControllerRenderProps<T>;
+  fieldState: ControllerFieldState;
 };
 
-export const InputField = ({
+export const InputField = <T extends FieldValues>({
   label,
   placeholder,
-  description,
-  errorMessage,
-  iconLeft,
-  iconRight,
-}: Properties) => {
+  fieldState,
+  field,
+}: Properties<T>) => {
   return (
-    <Field.Root className={styles.field} touched>
+    <Field.Root className={styles.field}>
       <Field.Label className={styles.label}>{label}</Field.Label>
-
       <Field.Control
+        {...field}
         required
         placeholder={placeholder}
         className={styles.input}
       />
-      <Field.Error className={styles.error} match="valueMissing">
-        {errorMessage}
+
+      <Field.Error className={styles.error} match>
+        {fieldState.error?.message}
       </Field.Error>
-      {description && (
-        <Field.Description className={styles.error}>
-          {description}
-        </Field.Description>
-      )}
     </Field.Root>
   );
 };

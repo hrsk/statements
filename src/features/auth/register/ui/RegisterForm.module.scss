@@ -1,0 +1,30 @@
+  @use './../../../../shared/styles/typography' as *;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    min-height: 602px;
+    max-width: 492px;
+
+    .name {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .title {
+      margin: 0;
+      text-align: center;
+      @include typography($heading-24)
+    }
+
+    .description {
+      margin: 0;
+      color: #000;
+      text-align: center;
+      @include typography($text-16-regular)
+    }
+
+  }
