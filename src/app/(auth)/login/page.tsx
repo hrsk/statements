@@ -1,3 +1,1 @@
-export default function SignIn() {
-  return <div>Login</div>;
-}
+export { LoginForm as default } from "@/features/auth/login";

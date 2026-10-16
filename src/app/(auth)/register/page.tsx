@@ -1,3 +1,1 @@
-export default function CreateAccount() {
-  return <div>Create Account</div>;
-}
+export { RegisterForm as default } from "@/features/auth/register";

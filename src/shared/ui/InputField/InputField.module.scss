@@ -1,0 +1,50 @@
+@use '../../styles/typography' as *;
+@use '../../styles/colors';
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .controlWrapper {
+    position: relative;
+  }
+  .error {
+    min-height: 24px;
+      @include typography($text-16-regular);
+      color: #DC2626;
+  }
+
+.input {
+  border: 1.50px solid #dfdfe0;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 6px;
+  min-width: 230px;
+  width: 100%;
+  box-sizing: border-box;
+
+
+  &::placeholder {
+    padding: 56px;
+    color: #68686e;
+    @include typography($text-16-regular);
+  }
+        &:focus {
+          outline: none;
+          border: none;
+              box-shadow: 0 0 0 2px rgba(63, 63, 68, 0.16);
+        }
+  &:active{
+              border: #3f3f44;
+    box-shadow: 0 0 0 3px rgba(63, 63, 68, 0.16);
+  }
+  &:disabled {
+    background-color: #f5f5f8;
+  }
+}
+    .label {
+      color: #040404;
+      @include typography($text-16-semi)
+    }
+}
