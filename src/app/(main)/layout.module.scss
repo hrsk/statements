@@ -1,0 +1,17 @@
+.layoutContainer {
+  display: grid;
+  grid-template-columns: 256px minmax(0, 1fr);
+  gap: 16px;
+  min-height: 100vh;
+  padding: 16px;
+  background: #efeff0;
+  color: #19191c;
+}
+
+.main {
+  display: grid;
+  min-width: 0;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+}

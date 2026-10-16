@@ -2,3 +2,13 @@
 @use 'typography';
 @use 'font-sizes';
 @use 'colors';
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #efeff0;
+}
+main {
+  width: 1440px;
+  height: 1024px;
+ 
+}

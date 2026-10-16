@@ -1,0 +1,70 @@
+@use './../../../shared/styles/typography' as *;
+
+.sidebar {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  align-content: start;
+  gap: 24px;
+  padding: 24px 16px;
+  background: #ffffff;
+  border-radius: 16px;
+  position: sticky;
+  top: 16px;
+  height: calc(100vh - 32px);
+}
+
+.logo {
+  width: 212px;
+  height: 32px;
+    svg {
+      path {
+        fill: #0d0d0e;
+      }
+    }
+}
+
+.divider {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #dfdfe0;
+}
+
+.nav {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.navItem {
+  display: grid;
+  grid-template-columns: 24px auto;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border-radius: 6px;
+  @include typography($text-16-semi);
+  color: #19191c;
+  text-decoration: none;
+  
+  .navIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    background-color: #efeff0;
+    color: #6816d6;
+    .navIcon {
+      rect {
+        stroke: #6816d6;
+      }
+      circle {
+        stroke: #6816d6;
+      }
+      path {
+        stroke:  #6816d6;
+      }
+    }
+}
+}
